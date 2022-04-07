@@ -81,7 +81,7 @@ spec:
         kind: Application
       project: rosa-wus2-lab-apps
       source:
-        path: '{{ srcPath }}'
+        path: '{{ path }}'
         repoURL: '{{ srcRepoURL }}'
         targetRevision: '{{ srcTargetRevision }}'
       syncPolicy:
