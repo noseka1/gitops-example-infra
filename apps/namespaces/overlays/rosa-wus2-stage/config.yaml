@@ -1,0 +1,8 @@
+appName: namespaces
+userGivenName: namespaces
+destNamespace: default
+destServer: rosa-wus2-stage
+srcPath: apps/namespaces/overlays/rosa-wus2-stage
+srcRepoURL: https://github.com/noseka1/gitops-example-infra
+srcTargetRevision: ""
+labels: null
