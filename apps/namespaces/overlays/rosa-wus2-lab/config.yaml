@@ -1,7 +1,7 @@
 appName: namespaces
 userGivenName: namespaces
 destNamespace: default
-destServer: rosa-wus2-lab
+destCluster: rosa-wus2-lab
 srcPath: apps/namespaces/overlays/rosa-wus2-lab
 srcRepoURL: https://github.com/noseka1/gitops-example-infra
 srcTargetRevision: ""

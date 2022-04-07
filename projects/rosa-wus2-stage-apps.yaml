@@ -72,8 +72,8 @@ spec:
       namespace: argocd
     spec:
       destination:
+        name: '{{ destCluster }}'
         namespace: '{{ destNamespace }}'
-        server: '{{ destServer }}'
       ignoreDifferences:
       - group: argoproj.io
         jsonPointers:
