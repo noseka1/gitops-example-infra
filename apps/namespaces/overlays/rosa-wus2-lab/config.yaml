@@ -1,5 +1,5 @@
 appName: namespaces
 userGivenName: namespaces
-destNamespace: default
+destNamespace: ""
 srcTargetRevision: ""
 labels: null
