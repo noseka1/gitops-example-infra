@@ -44,7 +44,7 @@ spec:
           destination: {}
           project: ""
           source:
-            repoURL: ""
+            repoURL: https://github.com/noseka1/gitops-example-infra.git
   - git:
       files:
       - path: apps/**/rosa-wus2-lab/config_dir.yaml
@@ -62,7 +62,7 @@ spec:
               include: '{{ include }}'
               jsonnet: {}
               recurse: true
-            repoURL: ""
+            repoURL: https://github.com/noseka1/gitops-example-infra.git
   syncPolicy: {}
   template:
     metadata:
@@ -82,7 +82,7 @@ spec:
       project: rosa-wus2-lab-infra
       source:
         path: '{{ path }}'
-        repoURL: '{{ srcRepoURL }}'
+        repoURL: ""
         targetRevision: '{{ srcTargetRevision }}'
       syncPolicy:
         automated:

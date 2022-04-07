@@ -1,6 +1,5 @@
 appName: namespaces
 userGivenName: namespaces
 destNamespace: default
-srcRepoURL: https://github.com/noseka1/gitops-example-infra
 srcTargetRevision: ""
 labels: null
