@@ -72,7 +72,7 @@ spec:
       namespace: argocd
     spec:
       destination:
-        name: '{{ destCluster }}'
+        name: '{{ path.basename }}'
         namespace: '{{ destNamespace }}'
       ignoreDifferences:
       - group: argoproj.io
