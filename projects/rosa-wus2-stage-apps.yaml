@@ -54,7 +54,7 @@ spec:
       namespace: openshift-gitops
     spec:
       destination:
-        name: '{{ path.basename }}'
+        name: rosa-wus2-stage
         namespace: '{{ destNamespace }}'
       ignoreDifferences:
       - group: argoproj.io
