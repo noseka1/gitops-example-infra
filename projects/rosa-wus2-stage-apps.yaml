@@ -69,7 +69,7 @@ spec:
       labels:
         app.kubernetes.io/name: '{{ appName }}'
       name: rosa-wus2-stage-apps-{{ appName }}
-      namespace: argocd
+      namespace: openshift-gitops
     spec:
       destination:
         name: '{{ path.basename }}'
