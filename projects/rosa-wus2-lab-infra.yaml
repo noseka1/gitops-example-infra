@@ -45,24 +45,6 @@ spec:
           project: ""
           source:
             repoURL: https://github.com/noseka1/gitops-example-infra.git
-  - git:
-      files:
-      - path: apps/**/rosa-wus2-lab/argocd_config_dir.yaml
-      repoURL: https://github.com/noseka1/gitops-example-infra.git
-      requeueAfterSeconds: 20
-      revision: ""
-      template:
-        metadata: {}
-        spec:
-          destination: {}
-          project: ""
-          source:
-            directory:
-              exclude: '{{ exclude }}'
-              include: '{{ include }}'
-              jsonnet: {}
-              recurse: true
-            repoURL: https://github.com/noseka1/gitops-example-infra.git
   syncPolicy: {}
   template:
     metadata:
