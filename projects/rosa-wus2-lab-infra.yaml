@@ -68,7 +68,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: '{{ appName }}'
-      name: rosa-wus2-lab-infra-{{ userGivenName }}
+      name: rosa-wus2-lab-infra-{{ appName }}
       namespace: argocd
     spec:
       destination:
