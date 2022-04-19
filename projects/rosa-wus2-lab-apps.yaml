@@ -83,7 +83,7 @@ spec:
       source:
         path: '{{ path }}'
         repoURL: ""
-        targetRevision: '{{ srcTargetRevision }}'
+        targetRevision: ""
       syncPolicy:
         automated:
           allowEmpty: true
