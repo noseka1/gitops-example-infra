@@ -34,7 +34,7 @@ spec:
   generators:
   - git:
       files:
-      - path: apps/**/rosa-wus2-lab/config.yaml
+      - path: apps/**/rosa-wus2-lab/argocd_config.yaml
       repoURL: https://github.com/noseka1/gitops-example-apps.git
       requeueAfterSeconds: 20
       revision: ""
@@ -47,7 +47,7 @@ spec:
             repoURL: https://github.com/noseka1/gitops-example-apps.git
   - git:
       files:
-      - path: apps/**/rosa-wus2-lab/config_dir.yaml
+      - path: apps/**/rosa-wus2-lab/argocd_config_dir.yaml
       repoURL: https://github.com/noseka1/gitops-example-apps.git
       requeueAfterSeconds: 20
       revision: ""
