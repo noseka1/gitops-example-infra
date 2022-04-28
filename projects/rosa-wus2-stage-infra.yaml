@@ -1,10 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-options: PruneLast=true
-    argocd.argoproj.io/sync-wave: "-2"
-  creationTimestamp: null
   name: rosa-wus2-stage-infra
   namespace: openshift-gitops
 spec:
@@ -25,9 +21,6 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "0"
-  creationTimestamp: null
   name: rosa-wus2-stage-infra
   namespace: openshift-gitops
 spec:
