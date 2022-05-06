@@ -59,18 +59,26 @@ apps/app1/base/toolbox-container-sa.yaml
 apps/app1/overlays
 apps/app1/overlays/rosa-wus2-lab
 apps/app1/overlays/rosa-wus2-lab/lab
-apps/app1/overlays/rosa-wus2-lab/lab/argocd_config.yaml
+apps/app1/overlays/rosa-wus2-lab/lab/argocd_config_auto.yaml
 apps/app1/overlays/rosa-wus2-lab/lab/kustomization.yaml
 apps/app1/overlays/rosa-wus2-stage
 apps/app1/overlays/rosa-wus2-stage/dev
-apps/app1/overlays/rosa-wus2-stage/dev/argocd_config.yaml
+apps/app1/overlays/rosa-wus2-stage/dev/argocd_config_auto.yaml
 apps/app1/overlays/rosa-wus2-stage/dev/kustomization.yaml
 apps/app1/overlays/rosa-wus2-stage/int
-apps/app1/overlays/rosa-wus2-stage/int/argocd_config.yaml
+apps/app1/overlays/rosa-wus2-stage/int/argocd_config_auto.yaml
 apps/app1/overlays/rosa-wus2-stage/int/kustomization.yaml
+apps/app1/overlays/rosa-wus2-stage/stage
+apps/app1/overlays/rosa-wus2-stage/stage/argocd_config_manual.yaml
+apps/app1/overlays/rosa-wus2-stage/stage/kustomization.yaml
+apps/app1/overlays/rosa-wus2-stage/test
+apps/app1/overlays/rosa-wus2-stage/test/argocd_config_manual.yaml
+apps/app1/overlays/rosa-wus2-stage/test/kustomization.yaml
 ```
 
-The *argocd_config.yaml* file contains user-defined properties that will be used while constructing the Argo CD Application manifest:
+Either *argocd_config_auto.yaml* or *argocd_config_manual.yaml* must exist in each environment directory. The *argocd_config_auto.yaml* creates an Argo CD application with sync policy set to automated. The *argocd_config_manual.yaml* creates an Argo CD application with no sync policy (manual sync).
+
+The *argocd_config_\*.yaml* file contains user-defined properties that will be used while constructing the Argo CD Application manifest:
 
 ```
 $ cat apps/app1/overlays/rosa-wus2-stage/dev/argocd_config.yaml
@@ -78,7 +86,8 @@ appName: app1-dev
 destNamespace: app1-dev
 ```
 
-Currently, there are three properties available. The property *appName* is a unique identifier of the application, *destNamespace* is the Kubernetes namespace where this application will be deployed.
+Currently, there are two properties available. The property *appName* is a unique identifier of the application, *destNamespace* is the Kubernetes namespace where this application will be deployed.
+
 
 ## Deploying
 
