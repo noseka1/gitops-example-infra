@@ -76,4 +76,4 @@ spec:
       source:
         path: '{{ path }}'
         repoURL: ""
-        targetRevision: ""
+        targetRevision: '{{ targetRevision }}'
