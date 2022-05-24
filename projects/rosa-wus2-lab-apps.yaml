@@ -56,7 +56,8 @@ spec:
           project: ""
           source:
             repoURL: https://github.com/noseka1/gitops-example-apps.git
-  syncPolicy: {}
+  syncPolicy:
+    preserveResourcesOnDeletion: true
   template:
     metadata:
       labels:
