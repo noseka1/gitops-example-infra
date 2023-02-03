@@ -1,4 +1,3 @@
 appName: namespaces
 destNamespace: ""
 targetRevision: HEAD
-syncPolicyPrune: false
