@@ -21,7 +21,7 @@ spec:
           syncPolicy:
             automated:
               allowEmpty: true
-              prune: false
+              prune: '{{ syncPolicyPrune }}'
               selfHeal: true
   - git:
       files:
