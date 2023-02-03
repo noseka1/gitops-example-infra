@@ -3,6 +3,4 @@ kind: Kustomization
 
 resources:
 - ../../../base
-- app1-dev-ns.yaml
-- app1-int-ns.yaml
-- app1-test-ns.yaml
+- hello-world-prod.yaml
