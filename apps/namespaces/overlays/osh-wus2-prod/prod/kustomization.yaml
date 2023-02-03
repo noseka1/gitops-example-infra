@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
 - ../../../base
-- hello-world-prod.yaml
+- hello-world-prod-ns.yaml
