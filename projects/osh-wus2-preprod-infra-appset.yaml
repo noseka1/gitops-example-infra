@@ -55,4 +55,5 @@ spec:
         targetRevision: '{{ targetRevision }}'
       syncPolicy:
         syncOptions:
-          - ApplyOutOfSyncOnly=true
+        - ApplyOutOfSyncOnly=true
+        - ServerSideApply=true
