@@ -1,0 +1,44 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: osh-wus2-prod-apps
+  namespace: openshift-gitops
+spec:
+  description: osh-wus2-prod-apps project
+  destinations:
+  - namespace: '*'
+    server: '*'
+  namespaceResourceWhitelist:
+  # Keep the list in alphabetical order
+  - group: ''
+    kind: ConfigMap
+  - group: batch
+    kind: CronJob
+  - group: apps
+    kind: Deployment
+  - group: apps.openshift.io
+    kind: DeploymentConfig
+  - group: external-secrets.io
+    kind: ExternalSecret
+  - group: image.openshift.io
+    kind: ImageStream
+  - group: image.openshift.io
+    kind: ImageStreamTag
+  - group: ''
+    kind: PersistentVolumeClaim
+  - group: rbac.authorization.k8s.io
+    kind: Role
+  - group: rbac.authorization.k8s.io
+    kind: RoleBinding
+  - group: route.openshift.io
+    kind: Route
+  - group: ''
+    kind: Secret
+  - group: ''
+    kind: Service
+  - group: ''
+    kind: ServiceAccount
+  - group: apps
+    kind: StatefulSet
+  sourceRepos:
+  - '*'

@@ -1,35 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  name: rosa-wus2-lab-infra
-  namespace: openshift-gitops
-spec:
-  clusterResourceWhitelist:
-  - group: '*'
-    kind: '*'
-  description: rosa-wus2-lab-infra project
-  destinations:
-  - namespace: '*'
-    server: '*'
-  namespaceResourceWhitelist:
-  - group: '*'
-    kind: '*'
-  sourceRepos:
-  - '*'
-
----
-apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: rosa-wus2-lab-infra
+  name: osh-wus2-preprod-infra
   namespace: openshift-gitops
 spec:
   generators:
   - git:
       files:
-      - path: apps/**/rosa-wus2-lab/*/argocd_config_auto.yaml
+      - path: apps/**/osh-wus2-preprod/*/argocd_config_auto.yaml
       repoURL: https://github.com/noseka1/gitops-example-infra.git
-      requeueAfterSeconds: 20
+      requeueAfterSeconds: 60
       revision: ""
       template:
         metadata: {}
@@ -45,9 +25,9 @@ spec:
               selfHeal: true
   - git:
       files:
-      - path: apps/**/rosa-wus2-lab/*/argocd_config_manual.yaml
+      - path: apps/**/osh-wus2-preprod/*/argocd_config_manual.yaml
       repoURL: https://github.com/noseka1/gitops-example-infra.git
-      requeueAfterSeconds: 20
+      requeueAfterSeconds: 60
       revision: ""
       template:
         metadata: {}
@@ -62,19 +42,17 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: '{{ appName }}'
-      name: rosa-wus2-lab-infra-{{ appName }}
+      name: osh-wus2-preprod-infra-{{ appName }}
       namespace: openshift-gitops
     spec:
       destination:
-        name: rosa-wus2-lab
+        name: osh-wus2-preprod
         namespace: '{{ destNamespace }}'
-      ignoreDifferences:
-      - group: argoproj.io
-        jsonPointers:
-        - /status
-        kind: Application
-      project: rosa-wus2-lab-infra
+      project: osh-wus2-preprod-infra
       source:
         path: '{{ path }}'
         repoURL: ""
         targetRevision: '{{ targetRevision }}'
+      syncPolicy:
+        syncOptions:
+          - ApplyOutOfSyncOnly=true

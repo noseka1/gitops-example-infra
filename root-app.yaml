@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: root
+  namespace: openshift-gitops
+spec:
+  project: default
+  destination:
+    name: osh-wus2-prod
+    namespace: openshift-gitops
+  source:
+    path: projects
+    repoURL: https://github.com/noseka1/gitops-example-infra.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      selfHeal: true
+      prune: false
