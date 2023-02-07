@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - ../../../base
 - hello-world-dev-ns.yaml
+- microservices-demo-dev-ns.yaml
