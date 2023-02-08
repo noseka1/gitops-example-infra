@@ -56,5 +56,5 @@ spec:
       syncPolicy:
         syncOptions:
         - ApplyOutOfSyncOnly=true
+        - FailOnSharedResource=true
         - ServerSideApply=true
-

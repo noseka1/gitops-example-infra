@@ -19,4 +19,5 @@ spec:
       prune: false
     syncOptions:
     - ApplyOutOfSyncOnly=true
+    - FailOnSharedResource=true
     - ServerSideApply=true
