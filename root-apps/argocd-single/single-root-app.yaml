@@ -12,6 +12,8 @@ spec:
     path: projects
     repoURL: https://github.com/noseka1/gitops-example-infra.git
     targetRevision: HEAD
+    directory:
+      recurse: true
   syncPolicy:
     automated:
       allowEmpty: true
