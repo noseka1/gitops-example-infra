@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: osh-wus2-preprod-root
   namespace: openshift-gitops
 spec:
   project: default
   destination:
-    name: osh-wus2-prod
+    name: osh-wus2-preprod
     namespace: openshift-gitops
   source:
-    path: projects
+    path: projects/osh-wus2-preprod
     repoURL: https://github.com/noseka1/gitops-example-infra.git
     targetRevision: HEAD
   syncPolicy:
