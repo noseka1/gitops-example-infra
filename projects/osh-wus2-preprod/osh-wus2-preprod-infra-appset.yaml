@@ -52,7 +52,7 @@ spec:
       source:
         path: '{{ path }}'
         repoURL: ""
-        targetRevision: 'cluster/osh-wus2-preprod/infra'
+        targetRevision: cluster/osh-wus2-preprod/infra
       syncPolicy:
         syncOptions:
         - ApplyOutOfSyncOnly=true
