@@ -52,7 +52,7 @@ spec:
       source:
         path: '{{ path }}'
         repoURL: ""
-        targetRevision: cluster/osh-wus2-preprod/apps/{{ path.basename }}
+        targetRevision: cluster/osh-wus2-preprod/{{ path.basename }}
       syncPolicy:
         syncOptions:
         - ApplyOutOfSyncOnly=true
