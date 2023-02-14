@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       files:
-      - path: apps/**/osh-wus2-prod/*/argocd_config_auto.yaml
+      - path: apps/**/osh-wus2-prod/argocd_config_auto.yaml
       repoURL: https://github.com/noseka1/gitops-example-infra.git
       requeueAfterSeconds: 60
       revision: ""
@@ -25,7 +25,7 @@ spec:
               selfHeal: true
   - git:
       files:
-      - path: apps/**/osh-wus2-prod/*/argocd_config_manual.yaml
+      - path: apps/**/osh-wus2-prod/argocd_config_manual.yaml
       repoURL: https://github.com/noseka1/gitops-example-infra.git
       requeueAfterSeconds: 60
       revision: ""
@@ -42,7 +42,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: '{{ appName }}'
-      name: osh-wus2-prod-infra-{{ appName }}-{{ path.basename }}
+      name: osh-wus2-prod-infra-{{ appName }}
       namespace: openshift-gitops
     spec:
       destination:
