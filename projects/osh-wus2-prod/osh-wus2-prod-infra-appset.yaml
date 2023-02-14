@@ -42,7 +42,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: '{{ appName }}'
-      name: osh-wus2-prod-infra-{{ appName }}
+      name: osh-wus2-prod-infra-{{ appName }}-{{ path.basename }}
       namespace: openshift-gitops
     spec:
       destination:
@@ -52,7 +52,7 @@ spec:
       source:
         path: '{{ path }}'
         repoURL: ""
-        targetRevision: '{{ targetRevision }}'
+        targetRevision: 'cluster/osh-wus2-prod/infra'
       syncPolicy:
         syncOptions:
         - ApplyOutOfSyncOnly=true
