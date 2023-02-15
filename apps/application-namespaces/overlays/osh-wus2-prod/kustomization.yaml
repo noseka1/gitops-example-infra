@@ -3,5 +3,4 @@ kind: Kustomization
 
 resources:
 - ../../base
-- hello-world-prod-ns.yaml
 - microservices-demo-prod-ns.yaml
