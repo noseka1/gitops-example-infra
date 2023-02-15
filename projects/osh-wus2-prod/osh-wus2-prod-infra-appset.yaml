@@ -10,7 +10,7 @@ spec:
       - path: apps/**/osh-wus2-prod/argocd_config_auto.yaml
       repoURL: https://github.com/noseka1/gitops-example-infra.git
       requeueAfterSeconds: 60
-      revision: ""
+      revision: cluster/osh-wus2-prod/infra
       template:
         metadata: {}
         spec:
@@ -28,7 +28,7 @@ spec:
       - path: apps/**/osh-wus2-prod/argocd_config_manual.yaml
       repoURL: https://github.com/noseka1/gitops-example-infra.git
       requeueAfterSeconds: 60
-      revision: ""
+      revision: cluster/osh-wus2-prod/infra
       template:
         metadata: {}
         spec:
