@@ -1,0 +1,4 @@
+namespaces:
+  microservices-demo-dev:
+  microservices-demo-stage:
+  microservices-demo-test:

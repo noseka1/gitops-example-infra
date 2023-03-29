@@ -1,8 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-
-resources:
-- ../../base
-- microservices-demo-dev-ns.yaml
-- microservices-demo-stage-ns.yaml
-- microservices-demo-test-ns.yaml
